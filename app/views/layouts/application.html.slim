@@ -1,0 +1,10 @@
+doctype html
+html 
+  head
+    meta charset="utf-8"
+    title == yield(:title)
+    == stylesheet_link_tag "normalize", "all", "slim"
+    == javascript_include_tag "all"
+    == csrf_meta_tags
+  body.page_classes
+    == yield

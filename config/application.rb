@@ -31,5 +31,7 @@ module SampleApp
     config.generators.stylesheets = false
     config.generators.javascripts = false 
     config.generators.helper = false 
+
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end

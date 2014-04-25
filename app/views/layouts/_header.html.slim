@@ -1,9 +1,9 @@
 header class="navbar navbar-fixed-top navbar-inverse" role="navigation"
   div.container-fluid
-    == link_to "sample app", "#", id: "logo", class: "navbar-brand"
+    = link_to "sample app", "#", id: "logo", class: "navbar-brand"
     nav class="collapse navbar-collapse"
       ul class="nav navbar-nav pull-right"
-        li == link_to "Home", root_path
-        li == link_to "Help", help_path
-        li == link_to "About", about_path
-        li == link_to "Sign in", "#"
+        li = link_to "Home", root_path
+        li = link_to "Help", help_path
+        li = link_to "About", about_path
+        li = link_to "Sign in", "#"

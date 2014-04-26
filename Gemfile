@@ -58,6 +58,10 @@ group :test do
   gem 'factory_girl_rails'
   gem 'launchy'
   gem 'database_cleaner'
+
+  # rspec progress bar
+  gem 'rspec-instafail'
+  gem 'fuubar'
 end
 
 group :production do

@@ -31,6 +31,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
+gem 'puma'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -38,7 +39,11 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'kaminari', github: 'amatsuda/kaminari'
+
 gem 'slim-rails'
+
+gem 'ffaker'
 
 group :doc do
   gem 'sdoc'
@@ -48,12 +53,13 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem "bullet"
+  gem 'rack-mini-profiler'
 end
 
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
-  gem 'faker'
   gem 'growl'
   gem 'factory_girl_rails'
   gem 'launchy'

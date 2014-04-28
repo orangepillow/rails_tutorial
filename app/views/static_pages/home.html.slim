@@ -1,7 +1,18 @@
-div class="jumbotron"
-  h1 Welcome to the Sample App
-  h2
-    | This is the home page for the <a href="http://railstutorial.jp">
-    | Ruby on Rails Tutorial</a> sample application.
-  == link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary"
+- if signed_in?
+  div.row
+    aside.col-md-4
+      section
+        = render 'shared/user_info'
+      section
+        = render 'shared/micropost_form'
+    div.col-md-8
+      h3 Micropost Feed
+      = render 'shared/feed'
+- else
+  div class="jumbotron"
+    h1 Welcome to the Sample App
+    h2
+      | This is the home page for the <a href="http://railstutorial.jp">
+      | Ruby on Rails Tutorial</a> sample application.
+    == link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary"
 
